@@ -1,0 +1,26 @@
+<?php
+
+// src/Acme/StoreBundle/Document/Loc.php
+namespace Acme\StoreBundle\Document;
+
+use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
+
+/**
+ * @MongoDB\EmbeddedDocument
+ *
+ */
+class Loc
+{
+
+    /**
+     * @MongoDB\String
+     */
+    protected $type;
+    
+    /**
+     * @MongoDB\Collection
+     */
+    
+    protected $coordinates;
+
+}

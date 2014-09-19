@@ -1,0 +1,37 @@
+<?php
+
+// src/Acme/StoreBundle/Document/Product.php
+namespace Acme\StoreBundle\Document;
+
+use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
+use Acme\StoreBundle\Document\Loc as Loc;
+
+/**
+ * @MongoDB\Document
+ * @MongoDB\Index(keys={"loc"="2dsphere"})
+ */
+class Product
+{
+    /**
+     * @MongoDB\Id
+     */
+    protected $id;
+
+    /**
+     * @MongoDB\String
+     */
+    protected $name;
+
+    /**
+     * @MongoDB\Float
+     */
+    protected $price;
+
+    /**
+     * @MongoDB\EmbedOne(targetDocument="Loc")
+     */
+    protected $loc;
+    
+
+
+}
