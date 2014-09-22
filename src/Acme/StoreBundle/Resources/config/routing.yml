@@ -4,4 +4,9 @@ acme_store_homepage:
 
 acme_store_create:
     path:     /create/{name}
-    defaults: { _controller: AcmeStoreBundle:Default:create } 
+    defaults: { _controller: AcmeStoreBundle:Default:create }
+    
+    
+acme_store_search:
+    path:     /search/{max}
+    defaults: { _controller: AcmeStoreBundle:Default:search }
