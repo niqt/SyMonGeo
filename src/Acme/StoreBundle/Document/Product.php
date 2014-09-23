@@ -27,6 +27,8 @@ class Product
      */
     protected $price;
 
+
+    
     /**
      * @MongoDB\EmbedOne(targetDocument="Loc")
      */
@@ -109,5 +111,27 @@ class Product
     public function getLoc()
     {
         return $this->loc;
+    }
+
+    /**
+     * Set distance
+     *
+     * @param string $distance
+     * @return self
+     */
+    public function setDistance($distance)
+    {
+        $this->distance = $distance;
+        return $this;
+    }
+
+    /**
+     * Get distance
+     *
+     * @return string $distance
+     */
+    public function getDistance()
+    {
+        return $this->distance;
     }
 }
